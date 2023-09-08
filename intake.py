@@ -68,4 +68,16 @@ def intake_pdf(filename):
 
 
 def clear_index():
+    ##### Import environment variables
+    load_dotenv()
+    COHERE_API_KEY = os.getenv("COHERE_API_KEY")
+    PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+
+    ##### Upload embeddings to Pinecone
+    pinecone.init(api_key=PINECONE_API_KEY, environment="gcp-starter")
+    index_name = "lamsu2"
+
     pinecone.delete_index("lamsu2")
+
+
+# clear_index()
