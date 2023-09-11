@@ -29,8 +29,8 @@ def query_pinecone(query):
 
     # print(np.array(xq).shape)
 
-    ##### Query, returning the top 5 most similar results
-    res = index.query(xq, top_k=5, include_metadata=True)
+    ##### Query, returning the top 3 most similar results
+    res = index.query(xq, top_k=3, include_metadata=True)
 
     # for match in res["matches"]:
     # print(f"{match['score']:.2f}: {match['metadata']['text']}")

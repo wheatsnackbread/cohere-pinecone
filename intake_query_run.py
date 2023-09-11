@@ -1,9 +1,11 @@
 from intake import intake_pdf, clear_index
 from query import query_pinecone
 
-pdf_list = ["assets/team_building.pdf"]  # ["assets/workplace_psychology.pdf"]
+pdf_list = [
+    "assets/mckinsey_2022_global_payments_report.pdf"
+]  # ["assets/workplace_psychology.pdf"]
 
-# clear_index()
+clear_index()
 
 for pdf in pdf_list:
     intake_pdf(pdf)

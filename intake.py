@@ -19,8 +19,8 @@ def intake_pdf(filename):
 
     text_splitter = RecursiveCharacterTextSplitter(
         # Set a really small chunk size, just to show.
-        chunk_size=500,
-        chunk_overlap=50,
+        chunk_size=1000,
+        chunk_overlap=250,
         length_function=len,
         add_start_index=True,
     )
